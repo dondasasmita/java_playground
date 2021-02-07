@@ -25,11 +25,12 @@ public class Exercise {
 
                 String[] studentInfo = str.split(",");
 
-                String name = studentInfo[0];
-                String language = studentInfo[1];
-                int experience  = Integer.parseInt(studentInfo[2]);
+                int id = Integer.parseInt(studentInfo[0]);
+                String name = studentInfo[1];
+                String language = studentInfo[2];
+                int experience  = Integer.parseInt(studentInfo[3]);
 
-                Student student = new Student(name, language, experience);
+                Student student = new Student(id, name, language, experience);
                 students.add(student);
             }
 
