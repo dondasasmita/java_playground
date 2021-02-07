@@ -17,7 +17,7 @@ public class Exercise {
 
         try {
 
-            BufferedReader in = new BufferedReader(new FileReader("src/files/students.txt"));
+            BufferedReader in = new BufferedReader(new FileReader(File.STUDENTS.path));
 
             String str;
 
@@ -34,11 +34,14 @@ public class Exercise {
                 students.add(student);
             }
 
+            in.close();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         // DO something with your objects
         for(Student student : students) {
