@@ -16,7 +16,7 @@ public class JDBCDemo {
 
         try {
             // This will load the MySQL driver, each DB has its own driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Setup the connection with the DB
             connection = DriverManager
