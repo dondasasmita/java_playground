@@ -18,6 +18,7 @@ public class Greeting {
         System.out.println(greet(currentTime));
         System.out.println(greet("18:20"));
         System.out.println(greet("04:00"));
+        System.out.println(greet("14:00"));
 
     }
 
