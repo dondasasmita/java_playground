@@ -1,0 +1,34 @@
+Problem:
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+(source: https://www.hackerrank.com/challenges/weather-observation-station-7/problem)
+
+Solution:
+SELECT DISTINCT(CITY) AS CITY_NAME
+FROM STATION
+WHERE RIGHT(CITY,1) = "a"
+OR RIGHT(CITY,1) = "e"
+OR RIGHT(CITY,1) = "i"
+OR RIGHT(CITY,1) = "o"
+OR RIGHT(CITY,1) = "u"
+ORDER BY CITY_NAME ASC;
+
+Problem:
+Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u)
+as both their first and last characters. Your result cannot contain duplicates.
+(source: https://www.hackerrank.com/challenges/weather-observation-station-8/problem)
+
+Solution:
+SELECT DISTINCT(CITY) AS CITY_NAME
+FROM STATION
+WHERE (LEFT(CITY,1) = "a"
+OR LEFT(CITY,1) = "e"
+OR LEFT(CITY,1) = "i"
+OR LEFT(CITY,1) = "o"
+OR LEFT(CITY,1) = "u")
+AND
+(RIGHT(CITY,1) = "a"
+OR RIGHT(CITY,1) = "e"
+OR RIGHT(CITY,1) = "i"
+OR RIGHT(CITY,1) = "o"
+OR RIGHT(CITY,1) = "u")
+ORDER BY CITY_NAME ASC;
